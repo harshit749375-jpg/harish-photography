@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harish Photography — Wedding Photographer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0908; --panel:#141210; --panel2:#1b1815;
+  --gold:#c9a35d; --gold-hi:#e8cd8f; --gold-dim:#7a6132;
+  --cream:#f3ecdd; --mute:#a89e8c; --line:#2c2822;
+  padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+}
+*{margin:0;padding:0;box-sizing:border-box;cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2730%27%20height%3D%2730%27%20viewBox%3D%270%200%2030%2030%27%3E%3Crect%20x%3D%274%27%20y%3D%279%27%20width%3D%2722%27%20height%3D%2715%27%20rx%3D%272%27%20fill%3D%27%23141210%27%20stroke%3D%27%23c9a35d%27%20stroke-width%3D%272%27/%3E%3Crect%20x%3D%2710%27%20y%3D%275%27%20width%3D%279%27%20height%3D%274%27%20fill%3D%27%23141210%27%20stroke%3D%27%23c9a35d%27%20stroke-width%3D%272%27/%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%2716.5%27%20r%3D%274.3%27%20fill%3D%27none%27%20stroke%3D%27%23e8cd8f%27%20stroke-width%3D%272%27/%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%2716.5%27%20r%3D%271.4%27%20fill%3D%27%23e8cd8f%27/%3E%3C/svg%3E") 6 8, pointer !important}
+a,button,input,textarea,select,label,.btn,.cbtn,.wcard,.svc,.mlink,.burger,.wa-float{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2730%27%20height%3D%2730%27%20viewBox%3D%270%200%2030%2030%27%3E%3Crect%20x%3D%274%27%20y%3D%279%27%20width%3D%2722%27%20height%3D%2715%27%20rx%3D%272%27%20fill%3D%27%23141210%27%20stroke%3D%27%23c9a35d%27%20stroke-width%3D%272%27/%3E%3Crect%20x%3D%2710%27%20y%3D%275%27%20width%3D%279%27%20height%3D%274%27%20fill%3D%27%23141210%27%20stroke%3D%27%23c9a35d%27%20stroke-width%3D%272%27/%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%2716.5%27%20r%3D%274.3%27%20fill%3D%27none%27%20stroke%3D%27%23e8cd8f%27%20stroke-width%3D%272%27/%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%2716.5%27%20r%3D%271.4%27%20fill%3D%27%23e8cd8f%27/%3E%3C/svg%3E") 6 8, pointer !important}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--ink);color:var(--cream);font-family:'Inter',sans-serif;font-weight:300;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 6vw}
+@media(min-width:900px){.wrap{padding:0 5vw}}
+
+/* progress bar */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:999;width:0%}
+
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:100;padding:22px 6vw;display:flex;justify-content:space-between;align-items:center;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(10,9,8,.86);backdrop-filter:blur(10px);padding:14px 6vw;border-color:var(--line)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;letter-spacing:.06em;color:var(--cream)}
+.logo em{color:var(--gold);font-style:normal}
+.navlinks{display:flex;gap:2.6rem;font-size:.85rem;letter-spacing:.03em}
+.navlinks a{position:relative;padding-bottom:4px;color:var(--mute);transition:color .3s}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s ease}
+.navlinks a:hover{color:var(--cream)}
+.navlinks a:hover::after{width:100%}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:110}
+.burger span{width:24px;height:1px;background:var(--gold)}
+#mnav{display:none;position:fixed;inset:0;background:var(--ink);z-index:105;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;font-family:'Cormorant Garamond',serif;font-size:1.6rem}
+
+/* hero */
+header{min-height:100svh;position:relative;display:flex;align-items:center;padding:140px 6vw 100px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:start;width:100%;max-width:760px}
+.eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:.16em;margin-bottom:1.1rem}
+.h-title{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;font-weight:600;color:var(--cream)}
+.h-title i{font-style:italic;color:var(--gold-hi)}
+.h-sub{margin:1.6rem 0 2.2rem;max-width:46ch;color:var(--mute);font-size:1.02rem;line-height:1.7}
+.btnrow{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{padding:15px 32px;font-size:.82rem;letter-spacing:.06em;border-radius:2px;cursor:pointer;border:1px solid transparent;transition:transform .3s,box-shadow .3s}
+.btn.gold{background:linear-gradient(135deg,var(--gold-hi),var(--gold-dim));color:#141210;font-weight:500}
+.btn.gold:hover{box-shadow:0 8px 30px -6px rgba(201,163,93,.55);transform:translateY(-2px)}
+.btn.ghost{border-color:var(--line);color:var(--cream)}
+.btn.ghost:hover{border-color:var(--gold)}
+
+
+.stats{display:flex;gap:3rem;margin-top:3.4rem;flex-wrap:wrap}
+.stat b{font-family:'Cormorant Garamond',serif;font-size:2.3rem;color:var(--gold-hi);display:block}
+.stat span{font-size:.75rem;color:var(--mute);letter-spacing:.04em}
+.scrolldown{position:absolute;left:6vw;bottom:34px;display:flex;align-items:center;gap:12px;font-size:.7rem;letter-spacing:.14em;color:var(--mute)}
+.dot{width:34px;height:34px;border:1px solid var(--gold-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+section{padding:130px 0}
+.tag{color:var(--gold);font-size:.78rem;letter-spacing:.16em;margin-bottom:.9rem}
+.sec-title{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:600;max-width:16ch}
+.sec-sub{color:var(--mute);max-width:52ch;margin-top:1rem;line-height:1.7}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr;gap:1.6rem;max-width:760px;margin:0 auto}
+.about-body p{color:var(--mute);line-height:1.85;margin-top:1.2rem;font-size:.98rem;transition:color .35s}
+.about-body p:hover{color:var(--cream)}
+.about-facts span{transition:color .3s,border-color .3s}
+.about-facts span:hover{color:var(--gold-hi);border-color:var(--gold-dim)}
+.about-facts{display:flex;gap:2.2rem;margin-top:2rem;flex-wrap:wrap}
+.about-facts span{font-size:.78rem;color:var(--gold);border-top:1px solid var(--line);padding-top:10px}
+
+/* work */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3.4rem}
+@media(max-width:860px){.work-grid{grid-template-columns:1fr}}
+.wcard{position:relative;border:1px solid var(--line);padding:38px 30px;background:transparent;transition:transform .4s ease,border-color .4s,box-shadow .4s}
+.wcard:hover{transform:translateY(-8px);border-color:var(--gold-dim);box-shadow:0 24px 48px -22px rgba(201,163,93,.4)}
+.wcard h3{font-size:1.4rem;font-weight:600;color:var(--cream)}
+.wcard p{color:var(--mute);font-size:.87rem;margin-top:10px;max-width:34ch;line-height:1.6}
+.wcard .go{font-size:.75rem;color:var(--gold);margin-top:18px;opacity:0;transform:translateX(-6px);transition:.4s}
+.wcard:hover .go{opacity:1;transform:none}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:3.4rem;border:1px solid var(--line)}
+@media(max-width:760px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--ink);padding:32px 26px;transition:background .35s}
+.svc:hover{background:var(--panel)}
+.svc .mk{color:var(--gold);font-size:1.1rem;margin-bottom:10px}
+.svc h4{font-size:1.05rem;font-weight:500;color:var(--cream)}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.6rem 3rem;margin-top:3.4rem}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+.why h4{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--gold-hi);margin-bottom:.5rem}
+.why p{color:var(--mute);font-size:.92rem;line-height:1.7}
+
+/* quote */
+.quote-sec{background:radial-gradient(ellipse at 50% 0%,#1b160e,var(--ink) 70%);text-align:center;padding:150px 0}
+.quote-sec q{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,3.4vw,2.7rem);color:var(--gold-hi);max-width:20ch;margin:0 auto;line-height:1.4}
+.quote-sec cite{display:block;margin-top:2rem;font-style:normal;color:var(--mute);font-size:.85rem;letter-spacing:.1em}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.cbtns{display:flex;flex-direction:column;gap:12px;margin-top:2rem}
+.cbtn{display:flex;align-items:center;gap:12px;padding:16px 18px;border:1px solid var(--line);font-size:.88rem;transition:border-color .3s,background .3s}
+.cbtn:hover{border-color:var(--gold-dim);background:var(--panel)}
+.cbtn b{color:var(--gold)}
+form{display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--cream);padding:14px 16px;font-family:'Inter',sans-serif;font-size:.9rem;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{resize:vertical;min-height:100px}
+form button{margin-top:4px}
+.formmsg{font-size:.82rem;color:var(--gold-hi);min-height:1.2em}
+
+/* final cta */
+.final{text-align:center;padding:150px 0 130px}
+.final .sec-title{margin:0 auto 1rem;max-width:none}
+.final p.lead{color:var(--mute);max-width:44ch;margin:0 auto 2.4rem;line-height:1.7}
+
+footer{border-top:1px solid var(--line);padding:60px 0 40px}
+.f-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+.f-nav{display:flex;gap:1.8rem;font-size:.82rem;color:var(--mute)}
+.f-bottom{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--mute);font-size:.78rem;flex-wrap:wrap;gap:.6rem}
+
+/* whatsapp float */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:90;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold-hi),var(--gold-dim));display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.6);transition:transform .3s}
+.wa-float:hover{transform:scale(1.08)}
+
+@media(max-width:860px){
+  .navlinks{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  section{padding:90px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<nav id="nav">
+  <div class="logo">HARISH <em>PHOTOGRAPHY</em></div>
+  <div class="navlinks">
+    <a href="#home">Home</a><a href="#work">Work</a><a href="#contact">Contact Us</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div id="mnav">
+  <a href="#home" class="mlink">Home</a><a href="#work" class="mlink">Work</a><a href="#contact" class="mlink">Contact Us</a>
+</div>
+
+<header id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">PHOTOGRAPHY STUDIO — JAIPUR, RAJASTHAN</div>
+      <h1 class="h-title">We love to make <i>memories.</i></h1>
+      <p class="h-sub">Hi, I'm Harish Kumawat — a wedding photographer. Since 2005 I've spent my career capturing the emotions, people and small unrepeatable moments that make an occasion unforgettable.</p>
+      <div class="btnrow">
+        <a class="btn gold" href="#contact">Book Your Shoot</a>
+        <a class="btn ghost" href="#work">Explore Our Work</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b data-count="20">0</b><span>YEARS OF EXPERIENCE</span></div>
+        <div class="stat"><b data-count="2096">0</b><span>WEDDINGS & OCCASIONS</span></div>
+        <div class="stat"><b data-count="2005" data-plain="1">2005</b><span>PHOTOGRAPHY SINCE</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="scrolldown"><div class="dot">↓</div> SCROLL TO EXPLORE</div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-body reveal">
+      <div class="tag">ABOUT HARISH</div>
+      <h2 class="sec-title">Stories. Emotions. Memories.</h2>
+      <p>I have been working in photography since 2005, capturing weddings, celebrations and special occasions across Rajasthan and beyond.</p>
+      <p>Over the years I've had the opportunity to photograph approximately 2,096 weddings and occasions — each with its own emotions, people and story.</p>
+      <p>For me, photography is more than taking pictures. It's about preserving the feeling of a moment, so you can experience it again years later.</p>
+      <div class="about-facts">
+        <span>PROFESSIONAL PHOTOGRAPHER</span><span>SINCE 2005</span><span>NIKON CAMERA EQUIPMENT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="reveal"><div class="tag">PORTFOLIO</div>
+    <h2 class="sec-title">Our Work</h2>
+    <p class="sec-sub">Every occasion has a story. We capture yours.</p></div>
+    <div class="work-grid">
+      <div class="wcard reveal"><div class="info"><h3>Wedding Photography</h3><p>Candid moments, rituals, and family celebrations — every emotion of your wedding day.</p><div class="go">View Gallery →</div></div></div>
+      <div class="wcard reveal"><div class="info"><h3>Pre-Wedding Photography</h3><p>Romantic sessions, cinematic locations and creative concepts.</p><div class="go">View Gallery →</div></div></div>
+      <div class="wcard reveal"><div class="info"><h3>Wedding Videography</h3><p>Cinematic films capturing the emotion and celebration of your special day.</p><div class="go">View Gallery →</div></div></div>
+      <div class="wcard reveal"><div class="info"><h3>Birthday Photography</h3><p>Fun, colorful, memorable birthday celebrations captured naturally.</p><div class="go">View Gallery →</div></div></div>
+      <div class="wcard reveal"><div class="info"><h3>Event Photography</h3><p>Professional coverage for parties, celebrations and corporate events.</p><div class="go">View Gallery →</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal"><div class="tag">SERVICES</div><h2 class="sec-title">What We Capture</h2></div>
+    <div class="svc-grid">
+      <div class="svc"><div class="mk">✦</div><h4>Wedding Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Candid Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Traditional Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Pre-Wedding Photoshoots</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Cinematic Wedding Films</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Birthday Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Event Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Couple Photoshoots</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Family Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Special Occasion Photography</h4></div>
+      <div class="svc"><div class="mk">✦</div><h4>Wedding Videography</h4></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="reveal"><div class="tag">WHY HARISH PHOTOGRAPHY</div><h2 class="sec-title">Your moments. Our passion.</h2></div>
+    <div class="why-grid">
+      <div class="why reveal"><h4>20+ Years of Experience</h4><p>Professional photography experience since 2005.</p></div>
+      <div class="why reveal"><h4>2000+ Occasions Covered</h4><p>Experience across weddings, birthdays, celebrations and special events.</p></div>
+      <div class="why reveal"><h4>Professional Nikon Camera</h4><p>Professional-quality equipment for high-quality photographs and videos.</p></div>
+      <div class="why reveal"><h4>Emotion-Focused Photography</h4><p>A focus on genuine expressions, emotions and natural moments.</p></div>
+      <div class="why reveal"><h4>Personalized Experience</h4><p>Every shoot is planned around your personality, event and vision.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-sec">
+  <div class="wrap reveal">
+    <q>The best photographs are not just pictures. They are memories you can feel.</q>
+    <cite>— Harish Photography</cite>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="tag">GET IN TOUCH</div>
+      <h2 class="sec-title">Let's create memories together.</h2>
+      <p class="sec-sub">Planning a wedding, birthday, pre-wedding shoot or special event? Let's talk about your vision.</p>
+      <div class="cbtns">
+        <a class="cbtn" id="callBtn" href="tel:+919784668701"><b>Call:</b> +91 97846 68701</a>
+        <a class="cbtn" id="mailBtn" href="mailto:harshitkumawat26@gmail.com"><b>Email:</b> harshitkumawat26@gmail.com</a>
+        <a class="cbtn" id="waBtn" href="https://wa.me/919784668701" target="_blank" rel="noopener"><b>WhatsApp:</b> Chat with Harish</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <form id="bookForm">
+        <div class="row2"><input required name="name" placeholder="Your Name"><input required name="phone" type="tel" placeholder="Phone Number"></div>
+        <div class="row2"><input required name="email" type="email" placeholder="Email"><select name="etype"><option value="">Event Type</option><option>Wedding</option><option>Pre-Wedding</option><option>Birthday</option><option>Event</option></select></div>
+        <input name="edate" type="date">
+        <textarea name="message" placeholder="Tell us about your event"></textarea>
+        <button class="btn gold" type="submit">Submit Inquiry</button>
+        <div class="formmsg" id="formmsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <div class="tag">TRUSTED BY HUNDREDS</div>
+    <h2 class="sec-title">So many people have trusted us with their moments. Now let us capture yours.</h2>
+    <p class="lead">One occasion. Thousands of emotions. Memories for a lifetime.</p>
+    <a class="btn gold" href="#contact">Book Your Photography Session →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div><div class="logo">HARISH <em>PHOTOGRAPHY</em></div><p style="color:var(--mute);margin-top:8px;font-size:.85rem">Capturing Moments. Creating Memories.</p></div>
+      <div class="f-nav"><a href="#home">Home</a><a href="#work">Work</a><a href="#contact">Contact Us</a></div>
+      <div style="color:var(--mute);font-size:.85rem">harshitkumawat26@gmail.com<br>+91 97846 68701</div>
+    </div>
+    <div class="f-bottom"><span>© 2026 Harish Photography. All Rights Reserved.</span><span>Jaipur, Rajasthan</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919784668701" target="_blank" rel="noopener" aria-label="WhatsApp">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="#141210"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2 22l5.36-1.4a9.9 9.9 0 0 0 4.68 1.19h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.17 3.03 14.69 2 12.04 2m0 1.8c2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.51-3.68 8.19-8.2 8.19a8.2 8.2 0 0 1-4.15-1.14l-.3-.17-3.1.81.83-3.02-.19-.31a8.13 8.13 0 0 1-1.25-4.35c0-4.52 3.68-8.2 8.17-8.2m-4.52 4.2c-.16 0-.43.06-.65.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.78 4.31 3.79 2.13.84 2.56.68 3.03.63.46-.04 1.49-.6 1.7-1.19.21-.58.21-1.08.14-1.19-.06-.1-.23-.16-.48-.29-.25-.12-1.49-.74-1.72-.82-.23-.09-.4-.13-.56.13-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.23-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43a1.6 1.6 0 0 0 .25-.41.46.46 0 0 0-.02-.44c-.06-.13-.56-1.37-.78-1.87-.2-.5-.41-.42-.56-.43z"/></svg>
+</a>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>40);
+  const h=document.documentElement;
+  document.getElementById('prog').style.width=(scrollY/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+
+const burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+burger.onclick=()=>{mnav.style.display=mnav.style.display==='flex'?'none':'flex';};
+document.querySelectorAll('.mlink').forEach(a=>a.onclick=()=>mnav.style.display='none');
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const counted=new Set();
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting && !counted.has(e.target)){
+    counted.add(e.target);
+    const el=e.target, target=+el.dataset.count;
+    if(el.dataset.plain){el.textContent=target;return;}
+    let cur=0; const step=Math.max(1,Math.round(target/60));
+    const t=setInterval(()=>{cur+=step; if(cur>=target){cur=target;clearInterval(t);} el.textContent=cur+'+';},24);
+  }
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('formmsg').textContent='Thank you — your inquiry has been noted. Harish will reach out to you shortly.';
+  e.target.reset();
+});
+</script>
+</body>
+</html>
